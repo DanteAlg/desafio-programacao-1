@@ -1,3 +1,5 @@
+<h1>Compras</h1>
+
 <%= form_for :purchases, url: purchases_path, method: :post, html: { :multipart => true } do |f| %>
   <%= f.file_field :file %>
   <%= f.submit %>
@@ -27,3 +29,5 @@
     <% end %>
   </tbody>
 </table>
+
+<h2>Receita bruta: <%= number_to_currency @gross_revenues %></h2>

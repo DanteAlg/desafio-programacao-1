@@ -1,6 +1,7 @@
 class PurchasesController < ApplicationController
   def index
     @purchases = Purchase.all
+    @gross_revenues = @purchases.map(&:gross_revenue).sum
   end
 
   def create
