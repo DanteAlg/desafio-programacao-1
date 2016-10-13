@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <header>
+      <% if current_user %>
+        <%= link_to 'SAIR', session_path(current_user.id), method: :delete %>
+      <% else %>
+        <%= link_to 'Login', new_session_path %>
+      <% end %>
+    </header>
+
     <%= yield %>
   </body>
 </html>
