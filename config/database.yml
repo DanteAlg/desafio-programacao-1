@@ -6,8 +6,8 @@ default: &default
 
 development:
   <<: *default
-  database: nexxas_development
+  database: nexaas_development
 
 test:
   <<: *default
-  database: nexxas_test
+  database: nexaas_test

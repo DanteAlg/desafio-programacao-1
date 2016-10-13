@@ -1,7 +1,7 @@
 # Dante Miranda
 
 ## Heroku
-http://nexxas-dante.herokuapp.com/
+https://nexaas-dante.herokuapp.com/
 
 ## Dependences 
 
