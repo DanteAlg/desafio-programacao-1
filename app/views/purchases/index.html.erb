@@ -1,0 +1,29 @@
+<%= form_for :purchases, url: purchases_path, method: :post, html: { :multipart => true } do |f| %>
+  <%= f.file_field :file %>
+  <%= f.submit %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comprador</th>
+      <th>Descrição da compra</th>
+      <th>Preço unitário</th>
+      <th>Qtd.</th>
+      <th>Local da compra</th>
+      <th>Vendendor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @purchases.each do |purchase| %>
+      <tr>
+        <td><%= purchase.purchaser_name %></td>
+        <td><%= purchase.item_description %></td>
+        <td><%= purchase.item_price %></td>
+        <td><%= purchase.purchase_count %></td>
+        <td><%= purchase.merchant_address %></td>
+        <td><%= purchase.merchant_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

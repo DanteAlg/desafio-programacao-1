@@ -27,6 +27,7 @@ group :test do
   gem 'shoulda-matchers',     '2.5.0', require: false
   gem 'simplecov',            '0.11.1', require: false
   gem 'database_cleaner',     '1.5.1'
+  gem 'rails-controller-testing'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
