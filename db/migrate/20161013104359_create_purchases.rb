@@ -3,11 +3,10 @@ class CreatePurchases < ActiveRecord::Migration[5.0]
     create_table :purchases do |t|
       t.string :purchaser_name
       t.string :item_description
-      t.float :item_price
+      t.decimal :item_price, precision: 8, scale: 2
       t.integer :purchase_count
       t.string :merchant_address
       t.string :merchant_name
-      t.string :file_id
 
       t.timestamps
     end

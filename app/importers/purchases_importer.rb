@@ -9,7 +9,7 @@ class PurchasesImporter
   def run
     @file_content.lines.drop(1).each do |line|
       values = HEADER.zip(line.chomp.split(/\t/)).to_h
-      Purchase.create!(values.merge(file_id: 'file_token'))
+      Purchase.create!(values)
     end
   end
 end
