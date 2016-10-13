@@ -1,6 +1,11 @@
-<%= form_for :user, url: registrations_path, method: :post do |f| %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
+<h1>Novo usuário</h1>
 
-  <%= f.submit "Submit" %>
+<%= form_for :user, url: registrations_path, method: :post do |f| %>
+  <label>Email</label> 
+  <%= f.text_field :email %>
+
+  <label>Password</label>
+  <%= f.password_field :password %>
+
+  <%= f.submit 'Criar usuário' %>
 <% end %>

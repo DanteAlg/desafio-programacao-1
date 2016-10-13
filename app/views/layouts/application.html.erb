@@ -10,13 +10,18 @@
 
   <body>
     <header>
-      <% if current_user %>
-        <%= link_to 'SAIR', session_path(current_user.id), method: :delete %>
-      <% else %>
-        <%= link_to 'Login', new_session_path %>
-      <% end %>
+      <div class='content'>
+        <% if current_user %>
+          <%= link_to 'SAIR', session_path(current_user.id), method: :delete %>
+        <% else %>
+          <%= link_to 'login', new_session_path %>
+          <%= link_to 'Criar conta', new_registration_path %>
+        <% end %>
+      </div>
     </header>
 
-    <%= yield %>
+    <div class='content'>
+      <%= yield %>
+    </div>
   </body>
 </html>
